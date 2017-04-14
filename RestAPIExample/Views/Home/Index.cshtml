@@ -1,0 +1,12 @@
+﻿@section scripts {
+    <script type="text/javascript">
+        try{
+            $.get("/api/Customer", function (data, status) {
+                alert("Total customer count: " + data.data[0].count + "\nStatus: " + status);
+            });
+        }catch(ex)
+        {
+            alert(ex);
+        }
+</script>
+}
